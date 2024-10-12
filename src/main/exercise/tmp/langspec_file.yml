@@ -1,0 +1,205 @@
+Assets:
+- associations:
+  - - NetworkAccess
+    - networks
+    - hosts
+  attack_steps:
+  - access
+  description: {}
+  name: Network
+  sub_assets: []
+  super_assets: []
+- associations:
+  - - NetworkAccess
+    - networks
+    - hosts
+  - - Credentials
+    - host
+    - passwords
+  attack_steps:
+  - connect
+  - authenticate
+  - guessPassword
+  - guessedPassword
+  - access
+  description: {}
+  name: Host
+  sub_assets: []
+  super_assets: []
+- associations:
+  - - Credentials
+    - user
+    - passwords
+  attack_steps:
+  - attemptPhishing
+  - phish
+  description: {}
+  name: User
+  sub_assets: []
+  super_assets: []
+- associations:
+  - - Credentials
+    - host
+    - passwords
+  - - Credentials
+    - user
+    - passwords
+  attack_steps:
+  - obtain
+  description: {}
+  name: Password
+  sub_assets: []
+  super_assets: []
+Associations:
+- description: {}
+  left:
+    asset: Network
+    fieldname: networks
+    max: null
+    min: 0
+  name: NetworkAccess
+  right:
+    asset: Host
+    fieldname: hosts
+    max: null
+    min: 0
+- description: {}
+  left:
+    asset: Host
+    fieldname: host
+    max: 1
+    min: 1
+  name: Credentials
+  right:
+    asset: Password
+    fieldname: passwords
+    max: null
+    min: 0
+- description: {}
+  left:
+    asset: User
+    fieldname: user
+    max: 1
+    min: 1
+  name: Credentials
+  right:
+    asset: Password
+    fieldname: passwords
+    max: null
+    min: 0
+Attack Steps:
+- asset: Network
+  children:
+    connect:
+    - NetworkAccess:
+        fieldname: hosts
+        next_association: {}
+  description: {}
+  name: access
+  parents: {}
+  ttc: null
+  type: or
+- asset: Host
+  children:
+    access:
+    - null
+  description: {}
+  name: connect
+  parents:
+    access:
+    - NetworkAccess:
+        fieldname: networks
+        next_association: {}
+  ttc: null
+  type: or
+- asset: Host
+  children:
+    access:
+    - null
+  description: {}
+  name: authenticate
+  parents:
+    guessedPassword:
+    - null
+    obtain:
+    - Credentials:
+        fieldname: passwords
+        next_association: {}
+  ttc: null
+  type: or
+- asset: Host
+  children:
+    guessedPassword:
+    - null
+  description: {}
+  name: guessPassword
+  parents: {}
+  ttc: null
+  type: or
+- asset: Host
+  children:
+    authenticate:
+    - null
+  description: {}
+  name: guessedPassword
+  parents:
+    guessPassword:
+    - null
+  ttc:
+    arguments:
+    - 0.02
+    name: Exponential
+    type: function
+  type: or
+- asset: Host
+  children: {}
+  description: {}
+  name: access
+  parents:
+    authenticate:
+    - null
+    connect:
+    - null
+  ttc: null
+  type: and
+- asset: User
+  children:
+    phish:
+    - null
+  description: {}
+  name: attemptPhishing
+  parents: {}
+  ttc: null
+  type: or
+- asset: User
+  children:
+    obtain:
+    - Credentials:
+        fieldname: passwords
+        next_association: {}
+  description: {}
+  name: phish
+  parents:
+    attemptPhishing:
+    - null
+  ttc:
+    arguments:
+    - 0.1
+    name: Exponential
+    type: function
+  type: or
+- asset: Password
+  children:
+    authenticate:
+    - Credentials:
+        fieldname: host
+        next_association: {}
+  description: {}
+  name: obtain
+  parents:
+    phish:
+    - Credentials:
+        fieldname: user
+        next_association: {}
+  ttc: null
+  type: or

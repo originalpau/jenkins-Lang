@@ -1,0 +1,173 @@
+assets:
+  0:
+    name: hackstock
+    type: Host
+  1:
+    name: energetic-bear
+    type: Host
+  2:
+    name: lazarus
+    type: Host
+  3:
+    name: sea-turtle
+    type: Host
+  4:
+    name: buckeye
+    type: Host
+  5:
+    name: cloud-hopper
+    type: Host
+  6:
+    name: fancy-bear
+    type: Host
+  7:
+    name: crash-course
+    type: User
+  8:
+    name: crash-course:8
+    type: Password
+  9:
+    name: www-data
+    type: User
+  10:
+    name: www-data:10
+    type: Password
+  11:
+    name: zero_cool
+    type: User
+  12:
+    name: zero_cool:12
+    type: Password
+  13:
+    name: goldstein
+    type: User
+  14:
+    name: goldstein:14
+    type: Password
+  15:
+    name: kate_libby
+    type: User
+  16:
+    name: kate_libby:16
+    type: Password
+  17:
+    name: mr_babbage
+    type: User
+  18:
+    name: mr_babbage:18
+    type: Password
+  19:
+    name: main-net
+    type: Network
+  20:
+    name: hidden-net
+    type: Network
+associations:
+- NetworkAccess:
+    hosts:
+    - 0
+    networks:
+    - 19
+- NetworkAccess:
+    hosts:
+    - 1
+    networks:
+    - 19
+- NetworkAccess:
+    hosts:
+    - 2
+    networks:
+    - 19
+- NetworkAccess:
+    hosts:
+    - 3
+    networks:
+    - 19
+- NetworkAccess:
+    hosts:
+    - 4
+    networks:
+    - 20
+- NetworkAccess:
+    hosts:
+    - 5
+    networks:
+    - 20
+- NetworkAccess:
+    hosts:
+    - 6
+    networks:
+    - 20
+- Credentials_User_Password:
+    passwords:
+    - 8
+    user:
+    - 7
+- Credentials_User_Password:
+    passwords:
+    - 10
+    user:
+    - 9
+- Credentials_User_Password:
+    passwords:
+    - 12
+    user:
+    - 11
+- Credentials_User_Password:
+    passwords:
+    - 14
+    user:
+    - 13
+- Credentials_User_Password:
+    passwords:
+    - 16
+    user:
+    - 15
+- Credentials_User_Password:
+    passwords:
+    - 18
+    user:
+    - 17
+- Credentials_Host_Password:
+    host:
+    - 0
+    passwords:
+    - 8
+- Credentials_Host_Password:
+    host:
+    - 1
+    passwords:
+    - 10
+- Credentials_Host_Password:
+    host:
+    - 2
+    passwords:
+    - 12
+- Credentials_Host_Password:
+    host:
+    - 3
+    passwords:
+    - 12
+- Credentials_Host_Password:
+    host:
+    - 4
+    passwords:
+    - 14
+- Credentials_Host_Password:
+    host:
+    - 5
+    passwords:
+    - 16
+- Credentials_Host_Password:
+    host:
+    - 6
+    passwords:
+    - 18
+attackers: {}
+metadata:
+  MAL-Toolbox Version: 0.1.6
+  info: Created by the mal-toolbox model python module.
+  langID: org.mal-lang.examplelang
+  langVersion: 1.0.0
+  malVersion: 0.1.0-SNAPSHOT
+  name: Simple EN2720 exampleLang model

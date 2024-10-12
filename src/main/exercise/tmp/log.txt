@@ -1,0 +1,401 @@
+10-08 18:51 maltoolbox   INFO     Set loggin level of maltoolbox to DEBUG.
+10-08 18:51 maltoolbox.language.languagegraph INFO     Loading mar archive ./org.mal-lang.examplelang-1.0.0.mar
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Create asset language graph nodes for asset Network
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Create asset language graph nodes for asset Host
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Create asset language graph nodes for asset User
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Create asset language graph nodes for asset Password
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Create association language graph nodes for asset Network
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Get associations for Network asset from language specification.
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Create association language graph nodes for asset Host
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Get associations for Host asset from language specification.
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Create association language graph nodes for asset User
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Get associations for User asset from language specification.
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Create association language graph nodes for asset Password
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Get associations for Password asset from language specification.
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Create attack steps language graph nodes for asset Network
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Get attack steps for Network asset from language specification.
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for access
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Create attack steps language graph nodes for asset Host
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Get attack steps for Host asset from language specification.
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for connect
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for authenticate
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for guessPassword
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for guessedPassword
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for access
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Create attack steps language graph nodes for asset User
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Get attack steps for User asset from language specification.
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for attemptPhishing
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for phish
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Create attack steps language graph nodes for asset Password
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Get attack steps for Password asset from language specification.
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for obtain
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Determining children for attack step access
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+{
+  "type": "collect",
+  "lhs": {
+    "type": "field",
+    "name": "hosts"
+  },
+  "rhs": {
+    "type": "attackStep",
+    "name": "connect"
+  }
+}
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+{
+  "type": "field",
+  "name": "hosts"
+}
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+{
+  "type": "attackStep",
+  "name": "connect"
+}
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Determining children for attack step connect
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+{
+  "type": "attackStep",
+  "name": "access"
+}
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Determining children for attack step authenticate
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+{
+  "type": "attackStep",
+  "name": "access"
+}
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Determining children for attack step guessPassword
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+{
+  "type": "attackStep",
+  "name": "guessedPassword"
+}
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Determining children for attack step guessedPassword
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+{
+  "type": "attackStep",
+  "name": "authenticate"
+}
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Determining children for attack step access
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Determining children for attack step attemptPhishing
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+{
+  "type": "attackStep",
+  "name": "phish"
+}
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Determining children for attack step phish
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+{
+  "type": "collect",
+  "lhs": {
+    "type": "field",
+    "name": "passwords"
+  },
+  "rhs": {
+    "type": "attackStep",
+    "name": "obtain"
+  }
+}
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+{
+  "type": "field",
+  "name": "passwords"
+}
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+{
+  "type": "attackStep",
+  "name": "obtain"
+}
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Determining children for attack step obtain
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+{
+  "type": "collect",
+  "lhs": {
+    "type": "field",
+    "name": "host"
+  },
+  "rhs": {
+    "type": "attackStep",
+    "name": "authenticate"
+  }
+}
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+{
+  "type": "field",
+  "name": "host"
+}
+10-08 18:51 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+{
+  "type": "attackStep",
+  "name": "authenticate"
+}
+10-08 18:51 maltoolbox.language.classes_factory DEBUG    Creating Network asset JSON schema entry.
+10-08 18:51 maltoolbox.language.classes_factory DEBUG    Creating Host asset JSON schema entry.
+10-08 18:51 maltoolbox.language.classes_factory DEBUG    Creating User asset JSON schema entry.
+10-08 18:51 maltoolbox.language.classes_factory DEBUG    Creating Password asset JSON schema entry.
+10-08 18:51 maltoolbox.language.classes_factory DEBUG    Creating NetworkAccess association JSON schema entry.
+10-08 18:51 maltoolbox.language.classes_factory INFO     Multiple associations with name Credentials exist. Creating subentries for each one.
+10-08 18:51 maltoolbox.language.classes_factory DEBUG    Creating Credentials association JSON schema entry.
+10-08 18:51 maltoolbox.language.classes_factory INFO     Creating Credentials_Host_Password subentry association.
+10-08 18:51 maltoolbox.language.classes_factory DEBUG    Creating Credentials association JSON schema entry.
+10-08 18:51 maltoolbox.language.classes_factory INFO     Creating Credentials_User_Password subentry association.
+10-08 18:51 maltoolbox.language.classes_factory DEBUG    {
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "urn:mal:maltoolbox:language:classes_factory",
+  "title": "LanguageObject",
+  "type": "object",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/LanguageAsset"
+    },
+    {
+      "$ref": "#/definitions/LanguageAssociation"
+    }
+  ],
+  "definitions": {
+    "LanguageAsset": {
+      "title": "LanguageAsset",
+      "type": "object",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/LanguageAsset/definitions/Network"
+        },
+        {
+          "$ref": "#/definitions/LanguageAsset/definitions/Host"
+        },
+        {
+          "$ref": "#/definitions/LanguageAsset/definitions/User"
+        },
+        {
+          "$ref": "#/definitions/LanguageAsset/definitions/Password"
+        }
+      ],
+      "definitions": {
+        "Network": {
+          "title": "Network",
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "type": {
+              "type": "string",
+              "default": "Network"
+            }
+          }
+        },
+        "Host": {
+          "title": "Host",
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "type": {
+              "type": "string",
+              "default": "Host"
+            }
+          }
+        },
+        "User": {
+          "title": "User",
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "type": {
+              "type": "string",
+              "default": "User"
+            }
+          }
+        },
+        "Password": {
+          "title": "Password",
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "type": {
+              "type": "string",
+              "default": "Password"
+            }
+          }
+        }
+      }
+    },
+    "LanguageAssociation": {
+      "title": "LanguageAssociation",
+      "type": "object",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/LanguageAssociation/definitions/NetworkAccess"
+        },
+        {
+          "$ref": "#/definitions/LanguageAssociation/definitions/Credentials"
+        }
+      ],
+      "definitions": {
+        "NetworkAccess": {
+          "title": "NetworkAccess",
+          "type": "object",
+          "properties": {
+            "networks": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/LanguageAsset/definitions/Network"
+              }
+            },
+            "hosts": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/LanguageAsset/definitions/Host"
+              }
+            }
+          }
+        },
+        "Credentials": {
+          "title": "Credentials",
+          "type": "object",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/LanguageAssociation/definitions/Credentials/definitions/Credentials_Host_Password"
+            },
+            {
+              "$ref": "#/definitions/LanguageAssociation/definitions/Credentials/definitions/Credentials_User_Password"
+            }
+          ],
+          "definitions": {
+            "Credentials_Host_Password": {
+              "title": "Credentials_Host_Password",
+              "type": "object",
+              "properties": {
+                "host": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/LanguageAsset/definitions/Host"
+                  },
+                  "maxItems": 1
+                },
+                "passwords": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/LanguageAsset/definitions/Password"
+                  }
+                }
+              }
+            },
+            "Credentials_User_Password": {
+              "title": "Credentials_User_Password",
+              "type": "object",
+              "properties": {
+                "user": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/LanguageAsset/definitions/User"
+                  },
+                  "maxItems": 1
+                },
+                "passwords": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/LanguageAsset/definitions/Password"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+10-08 18:51 maltoolbox.model DEBUG    Add "hackstock"(0) to model "Simple EN2720 exampleLang model".
+10-08 18:51 maltoolbox.model DEBUG    Add "energetic-bear"(1) to model "Simple EN2720 exampleLang model".
+10-08 18:51 maltoolbox.model DEBUG    Add "lazarus"(2) to model "Simple EN2720 exampleLang model".
+10-08 18:51 maltoolbox.model DEBUG    Add "sea-turtle"(3) to model "Simple EN2720 exampleLang model".
+10-08 18:51 maltoolbox.model DEBUG    Add "buckeye"(4) to model "Simple EN2720 exampleLang model".
+10-08 18:51 maltoolbox.model DEBUG    Add "cloud-hopper"(5) to model "Simple EN2720 exampleLang model".
+10-08 18:51 maltoolbox.model DEBUG    Add "fancy-bear"(6) to model "Simple EN2720 exampleLang model".
+10-08 18:51 maltoolbox.model DEBUG    Add "crash-course"(7) to model "Simple EN2720 exampleLang model".
+10-08 18:51 maltoolbox.model DEBUG    Add "crash-course:8"(8) to model "Simple EN2720 exampleLang model".
+10-08 18:51 maltoolbox.model DEBUG    Add "www-data"(9) to model "Simple EN2720 exampleLang model".
+10-08 18:51 maltoolbox.model DEBUG    Add "www-data:10"(10) to model "Simple EN2720 exampleLang model".
+10-08 18:51 maltoolbox.model DEBUG    Add "zero_cool"(11) to model "Simple EN2720 exampleLang model".
+10-08 18:51 maltoolbox.model DEBUG    Add "zero_cool:12"(12) to model "Simple EN2720 exampleLang model".
+10-08 18:51 maltoolbox.model DEBUG    Add "goldstein"(13) to model "Simple EN2720 exampleLang model".
+10-08 18:51 maltoolbox.model DEBUG    Add "goldstein:14"(14) to model "Simple EN2720 exampleLang model".
+10-08 18:51 maltoolbox.model DEBUG    Add "kate_libby"(15) to model "Simple EN2720 exampleLang model".
+10-08 18:51 maltoolbox.model DEBUG    Add "kate_libby:16"(16) to model "Simple EN2720 exampleLang model".
+10-08 18:51 maltoolbox.model DEBUG    Add "mr_babbage"(17) to model "Simple EN2720 exampleLang model".
+10-08 18:51 maltoolbox.model DEBUG    Add "mr_babbage:18"(18) to model "Simple EN2720 exampleLang model".
+10-08 18:51 maltoolbox.model DEBUG    Add "main-net"(19) to model "Simple EN2720 exampleLang model".
+10-08 18:51 maltoolbox.model DEBUG    Add "hidden-net"(20) to model "Simple EN2720 exampleLang model".
+10-08 18:51 maltoolbox.model DEBUG    Check to see if an association of type "NetworkAccess" already exists between "main-net" and "hackstock".
+10-08 18:51 maltoolbox.model DEBUG    No association of type "NetworkAccess" exists between "main-net" and "hackstock".
+10-08 18:51 maltoolbox.model DEBUG    Check to see if an association of type "NetworkAccess" already exists between "main-net" and "energetic-bear".
+10-08 18:51 maltoolbox.model DEBUG    No association of type "NetworkAccess" exists between "main-net" and "energetic-bear".
+10-08 18:51 maltoolbox.model DEBUG    Check to see if an association of type "NetworkAccess" already exists between "main-net" and "lazarus".
+10-08 18:51 maltoolbox.model DEBUG    No association of type "NetworkAccess" exists between "main-net" and "lazarus".
+10-08 18:51 maltoolbox.model DEBUG    Check to see if an association of type "NetworkAccess" already exists between "main-net" and "sea-turtle".
+10-08 18:51 maltoolbox.model DEBUG    No association of type "NetworkAccess" exists between "main-net" and "sea-turtle".
+10-08 18:51 maltoolbox.model DEBUG    Check to see if an association of type "NetworkAccess" already exists between "hidden-net" and "buckeye".
+10-08 18:51 maltoolbox.model DEBUG    No association of type "NetworkAccess" exists between "hidden-net" and "buckeye".
+10-08 18:51 maltoolbox.model DEBUG    Check to see if an association of type "NetworkAccess" already exists between "hidden-net" and "cloud-hopper".
+10-08 18:51 maltoolbox.model DEBUG    No association of type "NetworkAccess" exists between "hidden-net" and "cloud-hopper".
+10-08 18:51 maltoolbox.model DEBUG    Check to see if an association of type "NetworkAccess" already exists between "hidden-net" and "fancy-bear".
+10-08 18:51 maltoolbox.model DEBUG    No association of type "NetworkAccess" exists between "hidden-net" and "fancy-bear".
+10-08 18:51 maltoolbox.model DEBUG    Check to see if an association of type "Credentials_User_Password" already exists between "crash-course" and "crash-course:8".
+10-08 18:51 maltoolbox.model DEBUG    No association of type "Credentials_User_Password" exists between "crash-course" and "crash-course:8".
+10-08 18:51 maltoolbox.model DEBUG    Check to see if an association of type "Credentials_User_Password" already exists between "www-data" and "www-data:10".
+10-08 18:51 maltoolbox.model DEBUG    No association of type "Credentials_User_Password" exists between "www-data" and "www-data:10".
+10-08 18:51 maltoolbox.model DEBUG    Check to see if an association of type "Credentials_User_Password" already exists between "zero_cool" and "zero_cool:12".
+10-08 18:51 maltoolbox.model DEBUG    No association of type "Credentials_User_Password" exists between "zero_cool" and "zero_cool:12".
+10-08 18:51 maltoolbox.model DEBUG    Check to see if an association of type "Credentials_User_Password" already exists between "goldstein" and "goldstein:14".
+10-08 18:51 maltoolbox.model DEBUG    No association of type "Credentials_User_Password" exists between "goldstein" and "goldstein:14".
+10-08 18:51 maltoolbox.model DEBUG    Check to see if an association of type "Credentials_User_Password" already exists between "kate_libby" and "kate_libby:16".
+10-08 18:51 maltoolbox.model DEBUG    No association of type "Credentials_User_Password" exists between "kate_libby" and "kate_libby:16".
+10-08 18:51 maltoolbox.model DEBUG    Check to see if an association of type "Credentials_User_Password" already exists between "mr_babbage" and "mr_babbage:18".
+10-08 18:51 maltoolbox.model DEBUG    No association of type "Credentials_User_Password" exists between "mr_babbage" and "mr_babbage:18".
+10-08 18:51 maltoolbox.model DEBUG    Check to see if an association of type "Credentials_Host_Password" already exists between "hackstock" and "crash-course:8".
+10-08 18:51 maltoolbox.model DEBUG    No association of type "Credentials_Host_Password" exists between "hackstock" and "crash-course:8".
+10-08 18:51 maltoolbox.model DEBUG    Check to see if an association of type "Credentials_Host_Password" already exists between "energetic-bear" and "www-data:10".
+10-08 18:51 maltoolbox.model DEBUG    No association of type "Credentials_Host_Password" exists between "energetic-bear" and "www-data:10".
+10-08 18:51 maltoolbox.model DEBUG    Check to see if an association of type "Credentials_Host_Password" already exists between "lazarus" and "zero_cool:12".
+10-08 18:51 maltoolbox.model DEBUG    No association of type "Credentials_Host_Password" exists between "lazarus" and "zero_cool:12".
+10-08 18:51 maltoolbox.model DEBUG    Check to see if an association of type "Credentials_Host_Password" already exists between "sea-turtle" and "zero_cool:12".
+10-08 18:51 maltoolbox.model DEBUG    No association of type "Credentials_Host_Password" exists between "sea-turtle" and "zero_cool:12".
+10-08 18:51 maltoolbox.model DEBUG    Check to see if an association of type "Credentials_Host_Password" already exists between "buckeye" and "goldstein:14".
+10-08 18:51 maltoolbox.model DEBUG    No association of type "Credentials_Host_Password" exists between "buckeye" and "goldstein:14".
+10-08 18:51 maltoolbox.model DEBUG    Check to see if an association of type "Credentials_Host_Password" already exists between "cloud-hopper" and "kate_libby:16".
+10-08 18:51 maltoolbox.model DEBUG    No association of type "Credentials_Host_Password" exists between "cloud-hopper" and "kate_libby:16".
+10-08 18:51 maltoolbox.model DEBUG    Check to see if an association of type "Credentials_Host_Password" already exists between "fancy-bear" and "mr_babbage:18".
+10-08 18:51 maltoolbox.model DEBUG    No association of type "Credentials_Host_Password" exists between "fancy-bear" and "mr_babbage:18".
+10-08 18:51 maltoolbox.model DEBUG    Save instance model to file "simple_en2720_model.json".
+10-08 18:51 maltoolbox.model DEBUG    Translating model to dict.
+10-08 18:51 maltoolbox.model DEBUG    Translating assets to dictionary.
+10-08 18:51 maltoolbox.model DEBUG    Translating "hackstock"(0) to dictionary.
+10-08 18:51 maltoolbox.model DEBUG    Translating "energetic-bear"(1) to dictionary.
+10-08 18:51 maltoolbox.model DEBUG    Translating "lazarus"(2) to dictionary.
+10-08 18:51 maltoolbox.model DEBUG    Translating "sea-turtle"(3) to dictionary.
+10-08 18:51 maltoolbox.model DEBUG    Translating "buckeye"(4) to dictionary.
+10-08 18:51 maltoolbox.model DEBUG    Translating "cloud-hopper"(5) to dictionary.
+10-08 18:51 maltoolbox.model DEBUG    Translating "fancy-bear"(6) to dictionary.
+10-08 18:51 maltoolbox.model DEBUG    Translating "crash-course"(7) to dictionary.
+10-08 18:51 maltoolbox.model DEBUG    Translating "crash-course:8"(8) to dictionary.
+10-08 18:51 maltoolbox.model DEBUG    Translating "www-data"(9) to dictionary.
+10-08 18:51 maltoolbox.model DEBUG    Translating "www-data:10"(10) to dictionary.
+10-08 18:51 maltoolbox.model DEBUG    Translating "zero_cool"(11) to dictionary.
+10-08 18:51 maltoolbox.model DEBUG    Translating "zero_cool:12"(12) to dictionary.
+10-08 18:51 maltoolbox.model DEBUG    Translating "goldstein"(13) to dictionary.
+10-08 18:51 maltoolbox.model DEBUG    Translating "goldstein:14"(14) to dictionary.
+10-08 18:51 maltoolbox.model DEBUG    Translating "kate_libby"(15) to dictionary.
+10-08 18:51 maltoolbox.model DEBUG    Translating "kate_libby:16"(16) to dictionary.
+10-08 18:51 maltoolbox.model DEBUG    Translating "mr_babbage"(17) to dictionary.
+10-08 18:51 maltoolbox.model DEBUG    Translating "mr_babbage:18"(18) to dictionary.
+10-08 18:51 maltoolbox.model DEBUG    Translating "main-net"(19) to dictionary.
+10-08 18:51 maltoolbox.model DEBUG    Translating "hidden-net"(20) to dictionary.
+10-08 18:51 maltoolbox.model DEBUG    Translating associations to dictionary.
+10-08 18:51 maltoolbox.model DEBUG    Translating attackers to dictionary.
+10-08 18:51 maltoolbox.language.languagegraph INFO     Loading mar archive <maltoolbox.language.languagegraph.LanguageGraph object at 0x7fde7addba60>
