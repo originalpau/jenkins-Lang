@@ -44,7 +44,10 @@ pipeline {
             steps {
                 script {
                     echo 'Setting up Python virtual environment...'
-                    sh 'python3 -m venv $WORKSPACE/venv'
+                    sh '''
+                        apt install python3.11-venv
+                        python3 -m venv $WORKSPACE/venv'
+                    '''
                 }
             }
         }
