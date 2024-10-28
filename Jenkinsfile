@@ -36,7 +36,6 @@ pipeline {
                 script {
                     echo 'Creating attack graph with python script'
                     sh '''
-                        sh 'chmod +x jenkinsLang_gen.py'
                         sh 'python3 jenkinsLang_gen.py'
                     '''
                 }
