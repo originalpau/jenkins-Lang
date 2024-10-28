@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+     agent { 
+        docker { 
+            image 'python:3.8.16-bullseye' 
+            args '-u root'
+        }
+     }
     
     environment {
         AWS_ACCESS_KEY_ID = credentials('b2fc1a6c-1a3c-42cb-87b5-23a205486b43')
@@ -45,7 +50,7 @@ pipeline {
                 script {
                     echo 'Setting up Python virtual environment...'
                     sh '''
-                        apt install python3.11-venv
+                        apt install python3.11-venv -y
                         python3 -m venv $WORKSPACE/venv'
                     '''
                 }
