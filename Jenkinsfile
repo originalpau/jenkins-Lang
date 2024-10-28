@@ -30,13 +30,22 @@ pipeline {
                 }
             }
         }
+
+        stage('Verify Files') {
+            steps {
+                script {
+                    echo 'Listing workspace files...'
+                    sh 'ls -la $WORKSPACE'
+                }
+            }
+        }
         
         stage('Create attack graph') {
             steps {
                 script {
                     echo 'Creating attack graph with python script'
                     sh '''
-                        sh 'python3 jenkinsLang_gen.py'
+                        sh 'python3  $WORKSPACE/jenkinsLang_gen.py'
                     '''
                 }
             }
