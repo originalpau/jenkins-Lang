@@ -87,8 +87,10 @@ Save models as JSON.
 
 '''
 model.save_to_file('simple_en2720_model.json')
-graph = create_attack_graph(lang_graph, model)
-graph.attach_attackers(model)
+#graph = create_attack_graph(lang_graph, model)
+graph = AttackGraph(lang_graph, model)
+#graph.attach_attackers(model)
+graph.attach_attackers()
 graph.save_to_file('simple_en2720_attack_graph.json')
 
 '''
@@ -101,7 +103,7 @@ The Neo4J config can be under maltoolbox/default.conf.
 maltoolbox.neo4j_configs['uri'] = 'bolt://localhost:7687'
 maltoolbox.neo4j_configs['username'] = ''
 maltoolbox.neo4j_configs['password'] = ''
-maltoolbox.neo4j_configs['dbname'] = 'en2770'
+maltoolbox.neo4j_configs['dbname'] = 'neo4j'
 
 # Dump to Neo4J
 neo4j.ingest_model(model,

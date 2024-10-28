@@ -1,0 +1,107 @@
+{
+    "metadata": {
+        "name": "AWS instances model",
+        "langVersion": "1.0.0",
+        "langID": "org.mal-lang.examplelang",
+        "malVersion": "0.1.0-SNAPSHOT",
+        "MAL-Toolbox Version": "0.1.4",
+        "info": "Created by the mal-toolbox model python module."
+    },
+    "assets": {
+        "0": {
+            "name": "Public_Instance",
+            "type": "Host"
+        },
+        "1": {
+            "name": "subnet-0b171d18bce3e2c00",
+            "type": "Network"
+        },
+        "2": {
+            "name": "root",
+            "type": "User"
+        },
+        "3": {
+            "name": "root:3",
+            "type": "Password"
+        },
+        "4": {
+            "name": "Private_instance",
+            "type": "Host"
+        },
+        "5": {
+            "name": "subnet-0725e83a5790cee0c",
+            "type": "Network"
+        },
+        "6": {
+            "name": "root:6",
+            "type": "User"
+        },
+        "7": {
+            "name": "root:7",
+            "type": "Password"
+        }
+    },
+    "associations": [
+        {
+            "NetworkAccess": {
+                "networks": [
+                    1
+                ],
+                "hosts": [
+                    0
+                ]
+            }
+        },
+        {
+            "Credentials_User_Password": {
+                "user": [
+                    2
+                ],
+                "passwords": [
+                    3
+                ]
+            }
+        },
+        {
+            "Credentials_Host_Password": {
+                "host": [
+                    0
+                ],
+                "passwords": [
+                    3
+                ]
+            }
+        },
+        {
+            "NetworkAccess": {
+                "networks": [
+                    5
+                ],
+                "hosts": [
+                    4
+                ]
+            }
+        },
+        {
+            "Credentials_User_Password": {
+                "user": [
+                    6
+                ],
+                "passwords": [
+                    7
+                ]
+            }
+        },
+        {
+            "Credentials_Host_Password": {
+                "host": [
+                    4
+                ],
+                "passwords": [
+                    7
+                ]
+            }
+        }
+    ],
+    "attackers": {}
+}
