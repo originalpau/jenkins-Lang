@@ -36,7 +36,7 @@ pipeline {
                 script {
                     echo 'Creating attack graph with python script'
                     sh '''
-                        python3 jenkinsLang_gen.py
+                        python3 /src/main/exercise/lab jenkinsLang_gen.py
                     '''
                 }
             }
