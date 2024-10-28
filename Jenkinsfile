@@ -39,6 +39,15 @@ pipeline {
                 }
             }
         }
+
+        stage('Install Dependencies') {
+            steps {
+                script {
+                    echo 'Installing mal-toolbox dependency'
+                    sh "python3 -m pip install mal-toolbox"
+                }
+            }
+        }
         
         stage('Create attack graph') {
             steps {
