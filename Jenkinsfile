@@ -40,11 +40,23 @@ pipeline {
             }
         }
 
+        stage('Setup Virtual Environment') {
+            steps {
+                script {
+                    echo 'Setting up Python virtual environment...'
+                    sh 'python3 -m venv $WORKSPACE/venv'
+                }
+            }
+        }
+
         stage('Install Dependencies') {
             steps {
                 script {
-                    echo 'Installing mal-toolbox dependency'
-                    sh "python3 -m pip install mal-toolbox"
+                    echo 'Installing Python dependencies'
+                     sh '''
+                        source $WORKSPACE/venv/bin/activate
+                        pip install mal-toolbox
+                    '''
                 }
             }
         }
