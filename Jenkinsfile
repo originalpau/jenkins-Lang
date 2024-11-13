@@ -2,7 +2,7 @@ pipeline {
      agent { 
         docker { 
             image 'python:slim-bullseye' 
-            args '-user 0:0'
+            args '--user 0:0'
         }
      }
     
