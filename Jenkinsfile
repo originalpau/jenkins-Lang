@@ -1,8 +1,8 @@
 pipeline {
      agent { 
         docker { 
-            image 'python:3.8.16-bullseye' 
-            args '-u root'
+            image 'python:slim-bullseye' 
+            args '-user 0:0'
         }
      }
     
@@ -44,7 +44,7 @@ pipeline {
                 }
             }
         }
-
+/* 
         stage('Setup Virtual Environment') {
             steps {
                 script {
@@ -56,16 +56,19 @@ pipeline {
                 }
             }
         }
-
+ */
         stage('Install Dependencies') {
             steps {
-                script {
+                 withEnv(["HOME=${env.WORKSPACE}"]) {
+                    sh 'pip install mal-toolbox'
+                }
+/*                 script {
                     echo 'Installing Python dependencies'
                      sh '''
                         source $WORKSPACE/venv/bin/activate
                         pip install mal-toolbox
                     '''
-                }
+                } */
             }
         }
         
