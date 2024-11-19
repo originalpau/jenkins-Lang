@@ -1,8 +1,6 @@
 pipeline {
      agent { 
-        dockerfile { 
-            filename 'Dockerfile'
-        }
+        any
      }
     
     environment {
@@ -39,6 +37,7 @@ pipeline {
                     echo 'Listing EC2 Instances...'
                     sh '''
                         aws ec2 describe-instances \
+                            --region eu-north-1 \
                             --query 'Reservations[*].Instances[*].{Name:Tags[?Key==`Name`]|[0].Value,Instance:InstanceId,VPC:VpcId,Subnet:SubnetId,PublicIp:PublicIpAddress}' \
                             --filters "Name=instance-state-name,Values=running" "Name=tag:Project,Values=Jenkins" \
                             --output json > aws_output.json
