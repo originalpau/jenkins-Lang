@@ -1,7 +1,7 @@
 pipeline {
      agent { 
-        dockerfile {
-            filename 'Dockerfile' 
+        docker {
+            image 'originalpau07/custom-jenkins:v1' 
         }
      }
     
