@@ -1,7 +1,8 @@
 pipeline {
      agent { 
-        dockerfile { 
-            filename 'Dockerfile'
+        docker { 
+            image 'python:slim-bullseye' 
+            args '--user 0:0'
         }
      }
     
@@ -12,18 +13,6 @@ pipeline {
     }
     
     stages {
-        stage('Verify Environment') {
-            steps {
-                script {
-                    echo 'Verify environment'
-                    sh '''
-                    aws --version
-                    python3 -m pip show mal-toolbox
-                    '''
-                }
-            }
-        }
-
         stage('Login to AWS') {
             steps {
                 script {
@@ -56,6 +45,14 @@ pipeline {
             }
         }
 
+        stage('Install Dependencies') {
+            steps {
+                 withEnv(["HOME=${env.WORKSPACE}"]) {
+                    sh 'pip install mal-toolbox'
+                }
+            }
+        }
+        
         stage('Create attack graph') {
             steps {
                 script {
