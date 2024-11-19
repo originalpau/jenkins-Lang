@@ -44,31 +44,12 @@ pipeline {
                 }
             }
         }
-/* 
-        stage('Setup Virtual Environment') {
-            steps {
-                script {
-                    echo 'Setting up Python virtual environment...'
-                    sh '''
-                        apt install python3.11-venv -y
-                        python3 -m venv $WORKSPACE/venv'
-                    '''
-                }
-            }
-        }
- */
+
         stage('Install Dependencies') {
             steps {
                  withEnv(["HOME=${env.WORKSPACE}"]) {
                     sh 'pip install mal-toolbox'
                 }
-/*                 script {
-                    echo 'Installing Python dependencies'
-                     sh '''
-                        source $WORKSPACE/venv/bin/activate
-                        pip install mal-toolbox
-                    '''
-                } */
             }
         }
         
