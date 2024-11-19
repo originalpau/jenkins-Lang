@@ -1,0 +1,10 @@
+[
+    [
+        {
+            "Name": "Private_instance",
+            "Instance": "i-0fd19f997804bf0a3",
+            "VPC": "vpc-0fd9df75552c60821",
+            "Subnet": "subnet-0725e83a5790cee0c"
+        }
+    ]
+]
