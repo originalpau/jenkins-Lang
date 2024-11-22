@@ -40,7 +40,7 @@ graph = AttackGraph(lang_graph, model)
 graph.attach_attackers()
 graph.save_to_file('attack_graph.json')
 
-# My local Neo4J creds
+""" # My local Neo4J creds
 maltoolbox.neo4j_configs['uri'] = 'bolt://localhost:7687'
 maltoolbox.neo4j_configs['username'] = ''
 maltoolbox.neo4j_configs['password'] = ''
@@ -61,5 +61,5 @@ neo4j.ingest_attack_graph(graph,
     maltoolbox.neo4j_configs['password'],
     maltoolbox.neo4j_configs['dbname'],
     delete=False)
-
+ """
 
