@@ -4,6 +4,11 @@ pipeline {
             image 'originalpau07/custom-jenkins:v1'
         }
      }
+
+    options {
+        // This is required if you want to clean before build
+        skipDefaultCheckout(true)
+    }
     
     environment {
         AWS_ACCESS_KEY_ID = credentials('b2fc1a6c-1a3c-42cb-87b5-23a205486b43')
@@ -12,6 +17,12 @@ pipeline {
     }
     
     stages {
+        stage('Clean up workspace') {
+            steps {
+                cleanWs()
+                checkout scm
+            }
+        }
         stage('Login to AWS') {
             steps {
                 script {
@@ -70,6 +81,17 @@ pipeline {
                     '''
                 }
             }
+        }
+
+        post {
+        // Clean after build
+        always {
+            cleanWs(cleanWhenNotBuilt: false,
+                    deleteDirs: true,
+                    disableDeferredWipeout: true,
+                    notFailBuild: true,
+                    patterns: [[pattern: '.gitignore', type: 'INCLUDE'],
+                               [pattern: '.propsfile', type: 'EXCLUDE']])
         }
     }
 }
