@@ -77,7 +77,7 @@ pipeline {
                         aws s3 cp aws_model.json s3://neo4j-attackgraph/$TIMESTAMP/aws_model.json
                         aws s3 cp attack_graph.json s3://neo4j-attackgraph/$TIMESTAMP/attack_graph.json
                         aws s3 cp tmp/log.txt s3://neo4j-attackgraph/$TIMESTAMP/log.txt
-                        aws s3 cp aws_output.json s3://neo4j-attackgraph/$TIMESTAMP/aws_instances.json.txt
+                        aws s3 cp aws_output.json s3://neo4j-attackgraph/$TIMESTAMP/aws_instances.json
                     '''
                 }
             }
