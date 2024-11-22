@@ -28,13 +28,13 @@ pipeline {
                     def networks = ["Jenkins", "Jenkins2"]
 
                     networks.each { p -> 
-                        echo 'Listing EC2 Instances in ${networks}'
+                        echo "Listing EC2 Instances in ${networks}"
                         sh '''
                             aws ec2 describe-instances \
                                 --region eu-north-1 \
                                 --query 'Reservations[*].Instances[*].{Name:Tags[?Key==`Name`]|[0].Value,Instance:InstanceId,VPC:VpcId,Subnet:SubnetId,PublicIp:PublicIpAddress}' \
-                                --filters "Name=instance-state-name,Values=running" "Name=tag:Project,Values=${networks}" \
-                                --output json > ${networks}.json
+                                --filters "Name=instance-state-name,Values=running" "Name=tag:Project,Values=$networks" \
+                                --output json > $networks.json
                         '''
                     }
                 }
