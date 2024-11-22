@@ -31,15 +31,6 @@ pipeline {
                 }
             }
         }
-
-        stage('Verify AWS Output') {
-            steps {
-                script {
-                    echo 'Listing workspace files...'
-                    sh 'ls -la $WORKSPACE'
-                }
-            }
-        }
         
         stage('List EC2 Instances') {
             steps {
@@ -56,6 +47,15 @@ pipeline {
                                 --output json > ${p}.json
                         """
                     }
+                }
+            }
+        }
+
+        stage('Verify AWS Output') {
+            steps {
+                script {
+                    echo 'Listing workspace files...'
+                    sh 'ls -la $WORKSPACE'
                 }
             }
         }
