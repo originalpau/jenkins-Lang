@@ -2,7 +2,6 @@ pipeline {
      agent { 
         docker {
             image 'originalpau07/custom-jenkins:v1'
-            args '--user 0:0'
         }
      }
     
