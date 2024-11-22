@@ -47,31 +47,6 @@ pipeline {
             }
         }
 
-        stage('Verify Files') {
-            steps {
-                script {
-                    echo 'Listing workspace files...'
-                    sh 'ls -la $WORKSPACE'
-                }
-            }
-        }
-
-        stage('Verify and Upload log.txt') {
-            steps {
-                script {
-                    echo 'Checking if log.txt exists and has content'
-                    sh '''
-                        if [ -s ./tmp/log.txt ]; then
-                            echo "log.txt exists and is not empty"
-                        else
-                            echo "Error: log.txt is missing or empty"
-                            exit 1
-                        fi
-                    '''
-                }
-            }
-        }
-
         stage('Save output to S3 Bucket') {
             steps {
                 script {
@@ -80,7 +55,6 @@ pipeline {
                         TIMESTAMP=$(date +"%Y-%m-%d_%H:%M")
                         aws s3 cp aws_model.json s3://neo4j-attackgraph/$TIMESTAMP/aws_model.json
                         aws s3 cp attack_graph.json s3://neo4j-attackgraph/$TIMESTAMP/attack_graph.json
-                        aws s3 cp ./tmp/log.txt s3://neo4j-attackgraph/$TIMESTAMP/log.txt
                         aws s3 cp aws_output.json s3://neo4j-attackgraph/$TIMESTAMP/aws_instances.json
                     '''
                 }
