@@ -41,7 +41,7 @@ pipeline {
             }
         }
 
-        stage('Verify Files') {
+        stage('Verify AWS Output') {
             steps {
                 script {
                     echo 'Listing workspace files...'
@@ -49,7 +49,7 @@ pipeline {
                 }
             }
         }
-        
+
         stage('Create attack graph') {
             steps {
                 script {
