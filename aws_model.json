@@ -1,0 +1,61 @@
+{
+    "metadata": {
+        "name": "AWS instances model",
+        "langVersion": "1.0.0",
+        "langID": "org.mal-lang.examplelang",
+        "malVersion": "0.1.0-SNAPSHOT",
+        "MAL-Toolbox Version": "0.1.4",
+        "info": "Created by the mal-toolbox model python module."
+    },
+    "assets": {
+        "0": {
+            "name": "Private_instance",
+            "type": "Host"
+        },
+        "1": {
+            "name": "subnet-0725e83a5790cee0c",
+            "type": "Network"
+        },
+        "2": {
+            "name": "root",
+            "type": "User"
+        },
+        "3": {
+            "name": "root:3",
+            "type": "Password"
+        }
+    },
+    "associations": [
+        {
+            "NetworkAccess": {
+                "networks": [
+                    1
+                ],
+                "hosts": [
+                    0
+                ]
+            }
+        },
+        {
+            "Credentials_User_Password": {
+                "user": [
+                    2
+                ],
+                "passwords": [
+                    3
+                ]
+            }
+        },
+        {
+            "Credentials_Host_Password": {
+                "host": [
+                    0
+                ],
+                "passwords": [
+                    3
+                ]
+            }
+        }
+    ],
+    "attackers": {}
+}

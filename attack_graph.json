@@ -1,0 +1,155 @@
+{
+    "attack_steps": {
+        "Private_instance:connect": {
+            "id": 0,
+            "type": "or",
+            "name": "connect",
+            "ttc": null,
+            "children": {
+                "4": "Private_instance:access"
+            },
+            "parents": {
+                "5": "subnet-0725e83a5790cee0c:access"
+            },
+            "compromised_by": [],
+            "asset": "Private_instance",
+            "is_viable": "True",
+            "is_necessary": "True"
+        },
+        "Private_instance:authenticate": {
+            "id": 1,
+            "type": "or",
+            "name": "authenticate",
+            "ttc": null,
+            "children": {
+                "4": "Private_instance:access"
+            },
+            "parents": {
+                "3": "Private_instance:guessedPassword",
+                "8": "root:3:obtain"
+            },
+            "compromised_by": [],
+            "asset": "Private_instance",
+            "is_viable": "True",
+            "is_necessary": "True"
+        },
+        "Private_instance:guessPassword": {
+            "id": 2,
+            "type": "or",
+            "name": "guessPassword",
+            "ttc": null,
+            "children": {
+                "3": "Private_instance:guessedPassword"
+            },
+            "parents": {},
+            "compromised_by": [],
+            "asset": "Private_instance",
+            "is_viable": "True",
+            "is_necessary": "True"
+        },
+        "Private_instance:guessedPassword": {
+            "id": 3,
+            "type": "or",
+            "name": "guessedPassword",
+            "ttc": {
+                "type": "function",
+                "name": "Exponential",
+                "arguments": [
+                    0.02
+                ]
+            },
+            "children": {
+                "1": "Private_instance:authenticate"
+            },
+            "parents": {
+                "2": "Private_instance:guessPassword"
+            },
+            "compromised_by": [],
+            "asset": "Private_instance",
+            "is_viable": "True",
+            "is_necessary": "True"
+        },
+        "Private_instance:access": {
+            "id": 4,
+            "type": "and",
+            "name": "access",
+            "ttc": null,
+            "children": {},
+            "parents": {
+                "0": "Private_instance:connect",
+                "1": "Private_instance:authenticate"
+            },
+            "compromised_by": [],
+            "asset": "Private_instance",
+            "is_viable": "True",
+            "is_necessary": "True"
+        },
+        "subnet-0725e83a5790cee0c:access": {
+            "id": 5,
+            "type": "or",
+            "name": "access",
+            "ttc": null,
+            "children": {
+                "0": "Private_instance:connect"
+            },
+            "parents": {},
+            "compromised_by": [],
+            "asset": "subnet-0725e83a5790cee0c",
+            "is_viable": "True",
+            "is_necessary": "True"
+        },
+        "root:attemptPhishing": {
+            "id": 6,
+            "type": "or",
+            "name": "attemptPhishing",
+            "ttc": null,
+            "children": {
+                "7": "root:phish"
+            },
+            "parents": {},
+            "compromised_by": [],
+            "asset": "root",
+            "is_viable": "True",
+            "is_necessary": "True"
+        },
+        "root:phish": {
+            "id": 7,
+            "type": "or",
+            "name": "phish",
+            "ttc": {
+                "type": "function",
+                "name": "Exponential",
+                "arguments": [
+                    0.1
+                ]
+            },
+            "children": {
+                "8": "root:3:obtain"
+            },
+            "parents": {
+                "6": "root:attemptPhishing"
+            },
+            "compromised_by": [],
+            "asset": "root",
+            "is_viable": "True",
+            "is_necessary": "True"
+        },
+        "root:3:obtain": {
+            "id": 8,
+            "type": "or",
+            "name": "obtain",
+            "ttc": null,
+            "children": {
+                "1": "Private_instance:authenticate"
+            },
+            "parents": {
+                "7": "root:phish"
+            },
+            "compromised_by": [],
+            "asset": "root:3",
+            "is_viable": "True",
+            "is_necessary": "True"
+        }
+    },
+    "attackers": {}
+}
