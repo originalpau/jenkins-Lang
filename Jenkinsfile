@@ -75,7 +75,7 @@ pipeline {
                                     script {
                                         echo 'Saving output files to AWS storage'
                                         sh """
-                                            TIMESTAMP=$(date +"%Y-%m-%d_%H:%M")
+                                            TIMESTAMP=\$(date +"%Y-%m-%d_%H:%M")
                                             aws s3 cp aws_model.json s3://neo4j-attackgraph/\$TIMESTAMP-${project}/aws_model.json
                                             aws s3 cp attack_graph.json s3://neo4j-attackgraph/\$TIMESTAMP-${project}/attack_graph.json
                                             aws s3 cp ${project}_instances.json s3://neo4j-attackgraph/\$TIMESTAMP-${project}/${project}_instances.json
