@@ -32,7 +32,7 @@ pipeline {
                         aws ec2 describe-instances \
                             --region eu-north-1 \
                             --query 'Reservations[*].Instances[*].{Name:Tags[?Key==`Name`]|[0].Value,Instance:InstanceId,VPC:VpcId,Subnet:SubnetId,PublicIp:PublicIpAddress}' \
-                            --filters "Name=instance-state-name,Values=running" "Name=tag:Project,Values=Jenkins" \
+                            --filters "Name=instance-state-name,Values=running" "Name=tag:Project,Values=${networks}" \
                             --output json > ${networks}.json
                     '''
                 }
@@ -43,8 +43,18 @@ pipeline {
             steps {
                 script {
                     echo 'Creating attack graph with python script'
-                    sh 'python3 $WORKSPACE/jenkinsLang_gen.py ${networks}.json'
-                   
+                    sh '''
+                        python3 $WORKSPACE/jenkinsLang_gen.py ${networks}.json'
+                    '''
+                }
+            }
+        }
+
+        stage('Verify Files') {
+            steps {
+                script {
+                    echo 'Listing workspace files...'
+                    sh 'ls -la $WORKSPACE'
                 }
             }
         }
@@ -57,7 +67,7 @@ pipeline {
                         TIMESTAMP=$(date +"%Y-%m-%d_%H:%M")
                         aws s3 cp aws_model.json s3://neo4j-attackgraph/$TIMESTAMP/aws_model.json
                         aws s3 cp attack_graph.json s3://neo4j-attackgraph/$TIMESTAMP/attack_graph.json
-                        aws s3 cp ${networks}.json s3://neo4j-attackgraph/$TIMESTAMP/aws_instances.json
+                        aws s3 cp ${networks}.json s3://neo4j-attackgraph/$TIMESTAMP/${networks}.json
                     '''
                 }
             }
