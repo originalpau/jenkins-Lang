@@ -33,8 +33,8 @@ pipeline {
                             aws ec2 describe-instances \
                                 --region eu-north-1 \
                                 --query 'Reservations[*].Instances[*].{Name:Tags[?Key==`Name`]|[0].Value,Instance:InstanceId,VPC:VpcId,Subnet:SubnetId,PublicIp:PublicIpAddress}' \
-                                --filters "Name=instance-state-name,Values=running" "Name=tag:Project,Values=$p" \
-                                --output json > $p.json
+                                --filters "Name=instance-state-name,Values=running" "Name=tag:Project,Values=${p}" \
+                                --output json > ${p}.json
                         '''
                     }
                 }
