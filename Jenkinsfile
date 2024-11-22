@@ -13,18 +13,6 @@ pipeline {
     }
     
     stages {
-        stage('Verify Environment') {
-            steps {
-                script {
-                    echo 'Verify environment'
-                    sh '''
-                    aws --version
-                    python3 -m pip show mal-toolbox
-                    '''
-                }
-            }
-        }
-
         stage('Login to AWS') {
             steps {
                 script {
@@ -49,21 +37,21 @@ pipeline {
             }
         }
 
-        stage('Verify Files') {
-            steps {
-                script {
-                    echo 'Listing workspace files...'
-                    sh 'ls -la $WORKSPACE'
-                }
-            }
-        }
-
         stage('Create attack graph') {
             steps {
                 script {
                     echo 'Creating attack graph with python script'
                     sh 'python3 $WORKSPACE/jenkinsLang_gen.py'
                    
+                }
+            }
+        }
+
+        stage('Verify Files') {
+            steps {
+                script {
+                    echo 'Listing workspace files...'
+                    sh 'ls -la $WORKSPACE'
                 }
             }
         }
