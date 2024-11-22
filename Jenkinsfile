@@ -56,11 +56,18 @@ pipeline {
             }
         }
 
-        stage('Verify log') {
+        stage('Verify and Upload log.txt') {
             steps {
                 script {
-                    echo 'Listing log files...'
-                    sh 'cat $WORKSPACE/tmp/log.txt'
+                    echo 'Checking if log.txt exists and has content'
+                    sh '''
+                        if [ -s ./tmp/log.txt ]; then
+                            echo "log.txt exists and is not empty"
+                        else
+                            echo "Error: log.txt is missing or empty"
+                            exit 1
+                        fi
+                    '''
                 }
             }
         }
