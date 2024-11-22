@@ -61,15 +61,6 @@ pipeline {
             }
         }
 
-        stage('Verify Files') {
-            steps {
-                script {
-                    echo 'Listing workspace files...'
-                    sh 'ls -la $WORKSPACE'
-                }
-            }
-        }
-
         stage('Save output to S3 Bucket') {
             steps {
                 script {
