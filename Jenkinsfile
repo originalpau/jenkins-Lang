@@ -56,6 +56,15 @@ pipeline {
             }
         }
 
+        stage('Verify log') {
+            steps {
+                script {
+                    echo 'Listing log files...'
+                    sh 'cat $WORKSPACE/tmp/log.txt'
+                }
+            }
+        }
+
         stage('Save output to S3 Bucket') {
             steps {
                 script {
