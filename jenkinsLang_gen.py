@@ -7,9 +7,12 @@ from maltoolbox.model import Model as malmodel
 from maltoolbox.ingestors import neo4j
 
 import json
+import sys
 
-aws_output_json = open('./aws_output.json', 'r', newline='')
+#aws_output_json = open('./aws_output.json', 'r', newline='')
+aws_output_json = open(sys.argv[1], 'r', newline='')
 aws_output = json.loads(aws_output_json.read())
+aws_output_json.close()
 
 lang_file = './org.mal-lang.examplelang-1.0.0.mar' # malc produces .mar files
 lang_graph = LanguageGraph.from_mar_archive(lang_file)
