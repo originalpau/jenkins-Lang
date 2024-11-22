@@ -6,7 +6,6 @@ pipeline {
      }
 
     options {
-        // This is required if you want to clean before build
         skipDefaultCheckout(true)
     }
     
@@ -32,53 +31,61 @@ pipeline {
             }
         }
         
-        stage('List EC2 Instances') {
+        stage('Trigger Parallel Jobs for networks') {
             steps {
                 script {
-                    def networks = ["Jenkins", "Jenkins2"]
+                    def networks = ['Jenkins', 'Jenkins2']
+                    def parallelJobs = [:]
 
-                    networks.each { p -> 
-                        echo "Listing EC2 Instances in ${networks} as ${p}"
-                        sh """
-                            aws ec2 describe-instances \
-                                --region eu-north-1 \
-                                --query 'Reservations[*].Instances[*].{Name:Tags[?Key==`Name`]|[0].Value,Instance:InstanceId,VPC:VpcId,Subnet:SubnetId,PublicIp:PublicIpAddress}' \
-                                --filters "Name=instance-state-name,Values=running" "Name=tag:Project,Values=${p}" \
-                                --output json > ${p}.json
-                        """
-                    }
-                }
-            }
-        }
+                    networks.each { project -> parallelJobs[project] = {
+                        node {
+                            stage('Fetch EC2 Instances') {
+                                steps {
+                                    script {
+                                        echo "Listing EC2 Instances in ${project}"
+                                        sh """
+                                            aws ec2 describe-instances \
+                                                --region eu-north-1 \
+                                                --query 'Reservations[*].Instances[*].{Name:Tags[?Key==`Name`]|[0].Value,Instance:InstanceId,VPC:VpcId,Subnet:SubnetId,PublicIp:PublicIpAddress}' \
+                                                --filters "Name=instance-state-name,Values=running" "Name=tag:Project,Values=${project}" \
+                                                --output json > ${project}_instances.json
+                                        """
+                                    }
+                                }
+                            }
+                            stage('Verify AWS Output') {
+                                steps {
+                                    script {
+                                        echo 'Listing workspace files...'
+                                        sh 'ls -la $WORKSPACE'
+                                    }
+                                }
+                            }
+                            stage('Create attack graph') {
+                                steps {
+                                    script {
+                                        echo 'Creating attack graph with python script'
+                                        sh "python3 \$WORKSPACE/jenkinsLang_gen.py ${project}_instances.json"
+                                    }
+                                }
+                            }
 
-        stage('Verify AWS Output') {
-            steps {
-                script {
-                    echo 'Listing workspace files...'
-                    sh 'ls -la $WORKSPACE'
-                }
-            }
-        }
-
-        stage('Create attack graph') {
-            steps {
-                script {
-                    echo 'Creating attack graph with python script'
-                    sh "python3 \$WORKSPACE/jenkinsLang_gen.py Jenkins.json"
-                }
-            }
-        }
-
-        stage('Save output to S3 Bucket') {
-            steps {
-                script {
-                    echo 'Saving output files to AWS storage'
-                    sh '''
-                        TIMESTAMP=$(date +"%Y-%m-%d_%H:%M")
-                        aws s3 cp aws_model.json s3://neo4j-attackgraph/$TIMESTAMP/aws_model.json
-                        aws s3 cp attack_graph.json s3://neo4j-attackgraph/$TIMESTAMP/attack_graph.json
-                        aws s3 cp Jenkins.json s3://neo4j-attackgraph/$TIMESTAMP/Jenkins.json
-                    '''
+                            stage('Save output to S3 Bucket') {
+                                steps {
+                                    script {
+                                        echo 'Saving output files to AWS storage'
+                                        sh """
+                                            TIMESTAMP=$(date +"%Y-%m-%d_%H:%M")
+                                            aws s3 cp aws_model.json s3://neo4j-attackgraph/\$TIMESTAMP-${project}/aws_model.json
+                                            aws s3 cp attack_graph.json s3://neo4j-attackgraph/\$TIMESTAMP-${project}/attack_graph.json
+                                            aws s3 cp ${project}_instances.json s3://neo4j-attackgraph/\$TIMESTAMP-${project}/${project}_instances.json
+                                        """
+                                    }
+                                }
+                            }
+                        }
+                    }}
+                    parallel parallelJobs
                 }
             }
         }
