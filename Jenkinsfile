@@ -43,7 +43,7 @@ pipeline {
             steps {
                 script {
                     echo 'Creating attack graph with python script'
-                    sh 'python3 $WORKSPACE/jenkinsLang_gen.py ${networks}'
+                    sh 'python3 $WORKSPACE/jenkinsLang_gen.py ${networks}.json'
                    
                 }
             }
