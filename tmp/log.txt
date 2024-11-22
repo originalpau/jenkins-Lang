@@ -1,36 +1,36 @@
-11-22 16:43 maltoolbox   INFO     Set loggin level of maltoolbox to DEBUG.
-11-22 16:43 maltoolbox.language.languagegraph INFO     Loading mar archive ./org.mal-lang.examplelang-1.0.0.mar
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Create asset language graph nodes for asset Network
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Create asset language graph nodes for asset Host
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Create asset language graph nodes for asset User
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Create asset language graph nodes for asset Password
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Create association language graph nodes for asset Network
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Get associations for Network asset from language specification.
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Create association language graph nodes for asset Host
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Get associations for Host asset from language specification.
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Create association language graph nodes for asset User
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Get associations for User asset from language specification.
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Create association language graph nodes for asset Password
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Get associations for Password asset from language specification.
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Create attack steps language graph nodes for asset Network
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Get attack steps for Network asset from language specification.
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for access
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Create attack steps language graph nodes for asset Host
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Get attack steps for Host asset from language specification.
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for connect
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for authenticate
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for guessPassword
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for guessedPassword
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for access
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Create attack steps language graph nodes for asset User
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Get attack steps for User asset from language specification.
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for attemptPhishing
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for phish
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Create attack steps language graph nodes for asset Password
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Get attack steps for Password asset from language specification.
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for obtain
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Determining children for attack step access
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox   INFO     Set loggin level of maltoolbox to DEBUG.
+11-22 18:24 maltoolbox.language.languagegraph INFO     Loading mar archive ./org.mal-lang.examplelang-1.0.0.mar
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Create asset language graph nodes for asset Network
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Create asset language graph nodes for asset Host
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Create asset language graph nodes for asset User
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Create asset language graph nodes for asset Password
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Create association language graph nodes for asset Network
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Get associations for Network asset from language specification.
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Create association language graph nodes for asset Host
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Get associations for Host asset from language specification.
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Create association language graph nodes for asset User
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Get associations for User asset from language specification.
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Create association language graph nodes for asset Password
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Get associations for Password asset from language specification.
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Create attack steps language graph nodes for asset Network
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Get attack steps for Network asset from language specification.
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for access
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Create attack steps language graph nodes for asset Host
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Get attack steps for Host asset from language specification.
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for connect
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for authenticate
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for guessPassword
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for guessedPassword
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for access
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Create attack steps language graph nodes for asset User
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Get attack steps for User asset from language specification.
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for attemptPhishing
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for phish
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Create attack steps language graph nodes for asset Password
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Get attack steps for Password asset from language specification.
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Create attack step language graph nodes for obtain
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Determining children for attack step access
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
 {
   "type": "collect",
   "lhs": {
@@ -42,49 +42,49 @@
     "name": "connect"
   }
 }
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
 {
   "type": "field",
   "name": "hosts"
 }
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
 {
   "type": "attackStep",
   "name": "connect"
 }
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Determining children for attack step connect
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Determining children for attack step connect
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
 {
   "type": "attackStep",
   "name": "access"
 }
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Determining children for attack step authenticate
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Determining children for attack step authenticate
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
 {
   "type": "attackStep",
   "name": "access"
 }
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Determining children for attack step guessPassword
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Determining children for attack step guessPassword
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
 {
   "type": "attackStep",
   "name": "guessedPassword"
 }
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Determining children for attack step guessedPassword
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Determining children for attack step guessedPassword
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
 {
   "type": "attackStep",
   "name": "authenticate"
 }
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Determining children for attack step access
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Determining children for attack step attemptPhishing
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Determining children for attack step access
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Determining children for attack step attemptPhishing
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
 {
   "type": "attackStep",
   "name": "phish"
 }
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Determining children for attack step phish
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Determining children for attack step phish
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
 {
   "type": "collect",
   "lhs": {
@@ -96,18 +96,18 @@
     "name": "obtain"
   }
 }
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
 {
   "type": "field",
   "name": "passwords"
 }
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
 {
   "type": "attackStep",
   "name": "obtain"
 }
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Determining children for attack step obtain
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Determining children for attack step obtain
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
 {
   "type": "collect",
   "lhs": {
@@ -119,27 +119,27 @@
     "name": "authenticate"
   }
 }
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
 {
   "type": "field",
   "name": "host"
 }
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Processing Step Expression:
 {
   "type": "attackStep",
   "name": "authenticate"
 }
-11-22 16:43 maltoolbox.language.classes_factory DEBUG    Creating Network asset JSON schema entry.
-11-22 16:43 maltoolbox.language.classes_factory DEBUG    Creating Host asset JSON schema entry.
-11-22 16:43 maltoolbox.language.classes_factory DEBUG    Creating User asset JSON schema entry.
-11-22 16:43 maltoolbox.language.classes_factory DEBUG    Creating Password asset JSON schema entry.
-11-22 16:43 maltoolbox.language.classes_factory DEBUG    Creating NetworkAccess association JSON schema entry.
-11-22 16:43 maltoolbox.language.classes_factory INFO     Multiple associations with name Credentials exist. Creating subentries for each one.
-11-22 16:43 maltoolbox.language.classes_factory DEBUG    Creating Credentials association JSON schema entry.
-11-22 16:43 maltoolbox.language.classes_factory INFO     Creating Credentials_Host_Password subentry association.
-11-22 16:43 maltoolbox.language.classes_factory DEBUG    Creating Credentials association JSON schema entry.
-11-22 16:43 maltoolbox.language.classes_factory INFO     Creating Credentials_User_Password subentry association.
-11-22 16:43 maltoolbox.language.classes_factory DEBUG    {
+11-22 18:24 maltoolbox.language.classes_factory DEBUG    Creating Network asset JSON schema entry.
+11-22 18:24 maltoolbox.language.classes_factory DEBUG    Creating Host asset JSON schema entry.
+11-22 18:24 maltoolbox.language.classes_factory DEBUG    Creating User asset JSON schema entry.
+11-22 18:24 maltoolbox.language.classes_factory DEBUG    Creating Password asset JSON schema entry.
+11-22 18:24 maltoolbox.language.classes_factory DEBUG    Creating NetworkAccess association JSON schema entry.
+11-22 18:24 maltoolbox.language.classes_factory INFO     Multiple associations with name Credentials exist. Creating subentries for each one.
+11-22 18:24 maltoolbox.language.classes_factory DEBUG    Creating Credentials association JSON schema entry.
+11-22 18:24 maltoolbox.language.classes_factory INFO     Creating Credentials_Host_Password subentry association.
+11-22 18:24 maltoolbox.language.classes_factory DEBUG    Creating Credentials association JSON schema entry.
+11-22 18:24 maltoolbox.language.classes_factory INFO     Creating Credentials_User_Password subentry association.
+11-22 18:24 maltoolbox.language.classes_factory DEBUG    {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "urn:mal:maltoolbox:language:classes_factory",
   "title": "LanguageObject",
@@ -311,29 +311,29 @@
     }
   }
 }
-11-22 16:43 maltoolbox.model DEBUG    Add "Private_instance"(0) to model "AWS instances model".
-11-22 16:43 maltoolbox.model DEBUG    Add "subnet-0725e83a5790cee0c"(1) to model "AWS instances model".
-11-22 16:43 maltoolbox.model DEBUG    Check to see if an association of type "NetworkAccess" already exists between "subnet-0725e83a5790cee0c" and "Private_instance".
-11-22 16:43 maltoolbox.model DEBUG    No association of type "NetworkAccess" exists between "subnet-0725e83a5790cee0c" and "Private_instance".
-11-22 16:43 maltoolbox.model DEBUG    Add "root"(2) to model "AWS instances model".
-11-22 16:43 maltoolbox.model DEBUG    Add "root:3"(3) to model "AWS instances model".
-11-22 16:43 maltoolbox.model DEBUG    Check to see if an association of type "Credentials_User_Password" already exists between "root" and "root:3".
-11-22 16:43 maltoolbox.model DEBUG    No association of type "Credentials_User_Password" exists between "root" and "root:3".
-11-22 16:43 maltoolbox.model DEBUG    Check to see if an association of type "Credentials_Host_Password" already exists between "Private_instance" and "root:3".
-11-22 16:43 maltoolbox.model DEBUG    No association of type "Credentials_Host_Password" exists between "Private_instance" and "root:3".
-11-22 16:43 maltoolbox.model DEBUG    Save instance model to file "aws_model.json".
-11-22 16:43 maltoolbox.model DEBUG    Translating model to dict.
-11-22 16:43 maltoolbox.model DEBUG    Translating assets to dictionary.
-11-22 16:43 maltoolbox.model DEBUG    Translating "Private_instance"(0) to dictionary.
-11-22 16:43 maltoolbox.model DEBUG    Translating "subnet-0725e83a5790cee0c"(1) to dictionary.
-11-22 16:43 maltoolbox.model DEBUG    Translating "root"(2) to dictionary.
-11-22 16:43 maltoolbox.model DEBUG    Translating "root:3"(3) to dictionary.
-11-22 16:43 maltoolbox.model DEBUG    Translating associations to dictionary.
-11-22 16:43 maltoolbox.model DEBUG    Translating attackers to dictionary.
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack steps for asset Private_instance which is of class Host.
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Get attack steps for Host asset from language specification.
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack step node for connect.
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Add node "Private_instance:connect" with id:{node_id}:
+11-22 18:24 maltoolbox.model DEBUG    Add "Private_instance"(0) to model "AWS instances model".
+11-22 18:24 maltoolbox.model DEBUG    Add "subnet-0725e83a5790cee0c"(1) to model "AWS instances model".
+11-22 18:24 maltoolbox.model DEBUG    Check to see if an association of type "NetworkAccess" already exists between "subnet-0725e83a5790cee0c" and "Private_instance".
+11-22 18:24 maltoolbox.model DEBUG    No association of type "NetworkAccess" exists between "subnet-0725e83a5790cee0c" and "Private_instance".
+11-22 18:24 maltoolbox.model DEBUG    Add "root"(2) to model "AWS instances model".
+11-22 18:24 maltoolbox.model DEBUG    Add "root:3"(3) to model "AWS instances model".
+11-22 18:24 maltoolbox.model DEBUG    Check to see if an association of type "Credentials_User_Password" already exists between "root" and "root:3".
+11-22 18:24 maltoolbox.model DEBUG    No association of type "Credentials_User_Password" exists between "root" and "root:3".
+11-22 18:24 maltoolbox.model DEBUG    Check to see if an association of type "Credentials_Host_Password" already exists between "Private_instance" and "root:3".
+11-22 18:24 maltoolbox.model DEBUG    No association of type "Credentials_Host_Password" exists between "Private_instance" and "root:3".
+11-22 18:24 maltoolbox.model DEBUG    Save instance model to file "aws_model.json".
+11-22 18:24 maltoolbox.model DEBUG    Translating model to dict.
+11-22 18:24 maltoolbox.model DEBUG    Translating assets to dictionary.
+11-22 18:24 maltoolbox.model DEBUG    Translating "Private_instance"(0) to dictionary.
+11-22 18:24 maltoolbox.model DEBUG    Translating "subnet-0725e83a5790cee0c"(1) to dictionary.
+11-22 18:24 maltoolbox.model DEBUG    Translating "root"(2) to dictionary.
+11-22 18:24 maltoolbox.model DEBUG    Translating "root:3"(3) to dictionary.
+11-22 18:24 maltoolbox.model DEBUG    Translating associations to dictionary.
+11-22 18:24 maltoolbox.model DEBUG    Translating attackers to dictionary.
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack steps for asset Private_instance which is of class Host.
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Get attack steps for Host asset from language specification.
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack step node for connect.
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Add node "Private_instance:connect" with id:{node_id}:
 {
   "id": null,
   "type": "or",
@@ -346,8 +346,8 @@
   "is_viable": "True",
   "is_necessary": "True"
 }
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack step node for authenticate.
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Add node "Private_instance:authenticate" with id:{node_id}:
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack step node for authenticate.
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Add node "Private_instance:authenticate" with id:{node_id}:
 {
   "id": null,
   "type": "or",
@@ -360,8 +360,8 @@
   "is_viable": "True",
   "is_necessary": "True"
 }
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack step node for guessPassword.
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Add node "Private_instance:guessPassword" with id:{node_id}:
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack step node for guessPassword.
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Add node "Private_instance:guessPassword" with id:{node_id}:
 {
   "id": null,
   "type": "or",
@@ -374,8 +374,8 @@
   "is_viable": "True",
   "is_necessary": "True"
 }
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack step node for guessedPassword.
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Add node "Private_instance:guessedPassword" with id:{node_id}:
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack step node for guessedPassword.
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Add node "Private_instance:guessedPassword" with id:{node_id}:
 {
   "id": null,
   "type": "or",
@@ -394,8 +394,8 @@
   "is_viable": "True",
   "is_necessary": "True"
 }
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack step node for access.
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Add node "Private_instance:access" with id:{node_id}:
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack step node for access.
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Add node "Private_instance:access" with id:{node_id}:
 {
   "id": null,
   "type": "and",
@@ -408,10 +408,10 @@
   "is_viable": "True",
   "is_necessary": "True"
 }
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack steps for asset subnet-0725e83a5790cee0c which is of class Network.
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Get attack steps for Network asset from language specification.
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack step node for access.
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Add node "subnet-0725e83a5790cee0c:access" with id:{node_id}:
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack steps for asset subnet-0725e83a5790cee0c which is of class Network.
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Get attack steps for Network asset from language specification.
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack step node for access.
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Add node "subnet-0725e83a5790cee0c:access" with id:{node_id}:
 {
   "id": null,
   "type": "or",
@@ -424,10 +424,10 @@
   "is_viable": "True",
   "is_necessary": "True"
 }
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack steps for asset root which is of class User.
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Get attack steps for User asset from language specification.
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack step node for attemptPhishing.
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Add node "root:attemptPhishing" with id:{node_id}:
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack steps for asset root which is of class User.
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Get attack steps for User asset from language specification.
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack step node for attemptPhishing.
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Add node "root:attemptPhishing" with id:{node_id}:
 {
   "id": null,
   "type": "or",
@@ -440,8 +440,8 @@
   "is_viable": "True",
   "is_necessary": "True"
 }
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack step node for phish.
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Add node "root:phish" with id:{node_id}:
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack step node for phish.
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Add node "root:phish" with id:{node_id}:
 {
   "id": null,
   "type": "or",
@@ -460,10 +460,10 @@
   "is_viable": "True",
   "is_necessary": "True"
 }
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack steps for asset root:3 which is of class Password.
-11-22 16:43 maltoolbox.language.languagegraph DEBUG    Get attack steps for Password asset from language specification.
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack step node for obtain.
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Add node "root:3:obtain" with id:{node_id}:
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack steps for asset root:3 which is of class Password.
+11-22 18:24 maltoolbox.language.languagegraph DEBUG    Get attack steps for Password asset from language specification.
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Generating attack step node for obtain.
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Add node "root:3:obtain" with id:{node_id}:
 {
   "id": null,
   "type": "or",
@@ -476,37 +476,37 @@
   "is_viable": "True",
   "is_necessary": "True"
 }
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Determining children for attack step "Private_instance:connect"(0)
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Determining children for attack step "Private_instance:connect"(0)
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
 {
   "type": "attackStep",
   "name": "access"
 }
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Looking up node with id Private_instance:access
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Determining children for attack step "Private_instance:authenticate"(1)
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Looking up node with id Private_instance:access
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Determining children for attack step "Private_instance:authenticate"(1)
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
 {
   "type": "attackStep",
   "name": "access"
 }
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Looking up node with id Private_instance:access
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Determining children for attack step "Private_instance:guessPassword"(2)
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Looking up node with id Private_instance:access
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Determining children for attack step "Private_instance:guessPassword"(2)
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
 {
   "type": "attackStep",
   "name": "guessedPassword"
 }
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Looking up node with id Private_instance:guessedPassword
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Determining children for attack step "Private_instance:guessedPassword"(3)
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Looking up node with id Private_instance:guessedPassword
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Determining children for attack step "Private_instance:guessedPassword"(3)
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
 {
   "type": "attackStep",
   "name": "authenticate"
 }
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Looking up node with id Private_instance:authenticate
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Determining children for attack step "Private_instance:access"(4)
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Determining children for attack step "subnet-0725e83a5790cee0c:access"(5)
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Looking up node with id Private_instance:authenticate
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Determining children for attack step "Private_instance:access"(4)
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Determining children for attack step "subnet-0725e83a5790cee0c:access"(5)
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
 {
   "type": "collect",
   "lhs": {
@@ -518,27 +518,27 @@
     "name": "connect"
   }
 }
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
 {
   "type": "field",
   "name": "hosts"
 }
-11-22 16:43 maltoolbox.model DEBUG    Get associated assets for asset "subnet-0725e83a5790cee0c"(1) by field name hosts.
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.model DEBUG    Get associated assets for asset "subnet-0725e83a5790cee0c"(1) by field name hosts.
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
 {
   "type": "attackStep",
   "name": "connect"
 }
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Looking up node with id Private_instance:connect
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Determining children for attack step "root:attemptPhishing"(6)
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Looking up node with id Private_instance:connect
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Determining children for attack step "root:attemptPhishing"(6)
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
 {
   "type": "attackStep",
   "name": "phish"
 }
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Looking up node with id root:phish
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Determining children for attack step "root:phish"(7)
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Looking up node with id root:phish
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Determining children for attack step "root:phish"(7)
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
 {
   "type": "collect",
   "lhs": {
@@ -550,20 +550,20 @@
     "name": "obtain"
   }
 }
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
 {
   "type": "field",
   "name": "passwords"
 }
-11-22 16:43 maltoolbox.model DEBUG    Get associated assets for asset "root"(2) by field name passwords.
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.model DEBUG    Get associated assets for asset "root"(2) by field name passwords.
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
 {
   "type": "attackStep",
   "name": "obtain"
 }
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Looking up node with id root:3:obtain
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Determining children for attack step "root:3:obtain"(8)
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Looking up node with id root:3:obtain
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Determining children for attack step "root:3:obtain"(8)
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
 {
   "type": "collect",
   "lhs": {
@@ -575,17 +575,17 @@
     "name": "authenticate"
   }
 }
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
 {
   "type": "field",
   "name": "host"
 }
-11-22 16:43 maltoolbox.model DEBUG    Get associated assets for asset "root:3"(3) by field name host.
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
+11-22 18:24 maltoolbox.model DEBUG    Get associated assets for asset "root:3"(3) by field name host.
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Processing Step Expression:
 {
   "type": "attackStep",
   "name": "authenticate"
 }
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Looking up node with id Private_instance:authenticate
-11-22 16:43 maltoolbox.attackgraph.attackgraph INFO     Attach attackers from "AWS instances model" model to the graph.
-11-22 16:43 maltoolbox.attackgraph.attackgraph DEBUG    Save attack graph to file "attack_graph.json".
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Looking up node with id Private_instance:authenticate
+11-22 18:24 maltoolbox.attackgraph.attackgraph INFO     Attach attackers from "AWS instances model" model to the graph.
+11-22 18:24 maltoolbox.attackgraph.attackgraph DEBUG    Save attack graph to file "attack_graph.json".

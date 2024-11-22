@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 import maltoolbox
 from maltoolbox.language import LanguageClassesFactory
 from maltoolbox.language import LanguageGraph

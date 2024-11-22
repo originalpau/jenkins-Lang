@@ -2,7 +2,6 @@ pipeline {
      agent { 
         docker {
             image 'originalpau07/custom-jenkins:v1'
-            args '--user 0:0'
         }
      }
     
@@ -54,9 +53,9 @@ pipeline {
             steps {
                 script {
                     echo 'Creating attack graph with python script'
-                    sh '''
-                        python3 $WORKSPACE/jenkinsLang_gen.py Jenkins.json'
-                    '''
+                    sh """
+                        python3 $WORKSPACE/jenkinsLang_gen.py ${Jenkins.json}'
+                    """
                 }
             }
         }
@@ -65,12 +64,12 @@ pipeline {
             steps {
                 script {
                     echo 'Saving output files to AWS storage'
-                    sh '''
+                    sh """
                         TIMESTAMP=$(date +"%Y-%m-%d_%H:%M")
                         aws s3 cp aws_model.json s3://neo4j-attackgraph/$TIMESTAMP/aws_model.json
                         aws s3 cp attack_graph.json s3://neo4j-attackgraph/$TIMESTAMP/attack_graph.json
                         aws s3 cp Jenkins.json s3://neo4j-attackgraph/$TIMESTAMP/Jenkins.json
-                    '''
+                    """
                 }
             }
         }
