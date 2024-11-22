@@ -38,7 +38,7 @@ pipeline {
                     def parallelJobs = [:]
 
                     networks.each { project -> parallelJobs[project] = {
-                        node {
+                        node(master) {
                             stage('Fetch EC2 Instances') {
                                 steps {
                                     script {
