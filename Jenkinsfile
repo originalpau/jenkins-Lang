@@ -41,6 +41,15 @@ pipeline {
             }
         }
 
+        stage('Verify Files') {
+            steps {
+                script {
+                    echo 'Listing workspace files...'
+                    sh 'ls -la $WORKSPACE'
+                }
+            }
+        }
+        
         stage('Create attack graph') {
             steps {
                 script {
